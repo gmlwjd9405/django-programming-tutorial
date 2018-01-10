@@ -103,9 +103,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# 장고의 사용언어 지정
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+
+# TIME_ZONE = 'UTC'
+TIME_ZOME = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -118,5 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+# 프로젝트 정적 파일이 위치한 디렉터리 (각 app의 static 디렉터리보다 먼저 검색)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-
+# 미디어(파일 업로드 기능) 관련 사항 지정
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
