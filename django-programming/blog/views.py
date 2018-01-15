@@ -10,8 +10,8 @@ from blog.models import Post
 class PostLV(ListView):
     model = Post
     template_name = 'blog/post_all.html'  # default: post_list.html
-    context_object_name = 'posts'
-    paginate_by = 2
+    context_object_name = 'posts'  # 템플릿 파일로 넘겨주는 객체 리스트에 대한 변수명
+    paginate_by = 2  # 한 페이지에 보여주는 객체 리스트의 숫자
 
 
 # -- DetailView
@@ -28,7 +28,7 @@ class PostAV(ArchiveIndexView):
 class PostYAV(YearArchiveView):
     model = Post
     date_field = 'modify_date'
-    make_object_list = True
+    make_object_list = True  # 해당 연도에 해당하는 객체의 리스트를 만들어서 템플릿에 넘겨준다
 
 
 class PostMAV(MonthArchiveView):
