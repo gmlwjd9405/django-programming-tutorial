@@ -1,3 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}post_all.html{% endblock %}
+
+{% block content %}
+<div id="content">
+
 <h1>Blog List</h1>
 
 {% for post in posts %}
@@ -20,4 +27,8 @@
             <a href="?page={{ page_obj.next_page_number }}">NextPage</a>
         {% endif %}
     </span>
+
 </div>
+
+</div>
+{% endblock %}
