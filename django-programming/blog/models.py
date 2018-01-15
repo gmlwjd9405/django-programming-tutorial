@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse  # URL 패턴을 만들어주는 장고의 내장 함수
+from tagging.fields import TagField
 
 
 # Create your models here.
@@ -11,6 +12,7 @@ class Post(models.Model):
     content = models.TextField('CONTENT')
     create_date = models.DateField('Create Date', auto_now_add=True)
     modify_date = models.DateField('Modify Date', auto_now=True)
+    tag = TagField()
 
     # 필드 속성 외에 필요한 파라미터가 있으면 Meta 내부 클래스로 정의
     class Meta:
