@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'bookmark',
     'blog',
     'tagging',
+    'photo',
 ]
 
 MIDDLEWARE = [
